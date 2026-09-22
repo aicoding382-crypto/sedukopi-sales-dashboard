@@ -33,6 +33,57 @@ Dashboard ini dibuat untuk membantu memahami performa penjualan URUSKOPI melalui
 - DAX
 - Microsoft Excel
 
+## 🧮 DAX Measures
+
+### TOTAL OMZET
+``DAX
+TOTAL OMZET = SUM(pesanan4[JUMLAH HARGA])
+
+### TOTAL PESANAN 
+``DAX
+Total Pesanan = 
+DISTINCTCOUNT('pesanan4'[ID PESANAN])
+
+### Gross Profit
+``DAX
+Gross Profit = 
+SUM(detail_order3[SUB TOTAL]) - [TOTAL HPP]
+
+### Gross Margin %
+``DAX
+Gross Margin % = 
+DIVIDE(
+    [Gross Profit],
+    [Total Omzet],
+    0
+)
+### Achievement
+
+``DAX
+Achievement = 
+DIVIDE([TOTAL OMZET], [Target Bulanan])
+
+### TOTAL OMZET LY
+``DAX 
+TOTAL OMZET LY = CALCULATE([TOTAL OMZET],SAMEPERIODLASTYEAR(pesanan4[TANGGAL PESANAN].[Date]))
+### TOTAL HPP
+``DAX
+TOTAL HPP = SUMX(detail_order3,detail_order3[JUMLAH]* RELATED(item_menu2[HARGA POKOK]))
+
+## 🧹 Data Preparation
+
+Data diproses menggunakan Power Query sebelum digunakan dalam dashboard.
+
+Tahapan yang dilakukan meliputi:
+
+- Memeriksa kualitas data
+- Membersihkan data kosong
+- Memperbaiki tipe data
+- Memastikan format tanggal sesuai
+- Membersihkan data transaksi
+- Melakukan transformasi data yang diperlukan
+- Menyiapkan data untuk analisis di Power BI
+
 ## 📈 Dashboard
 
 Dashboard utama menampilkan KPI dan visualisasi untuk membantu analisis performa penjualan URUSKOPI.
