@@ -122,6 +122,6 @@ Insight dari hasil analisis akan digunakan untuk memahami:
 
 ## 👤 Author
 
-**AICoding382**
+**MUHAMMAD AS'AD DIFINUBUN**
 
 Power BI Data Analytics Portfolio
