@@ -36,6 +36,7 @@ Dashboard ini dibuat untuk membantu memahami performa penjualan URUSKOPI melalui
 ## 📈 Dashboard
 
 Dashboard utama menampilkan KPI dan visualisasi untuk membantu analisis performa penjualan URUSKOPI.
+![URUSKOPI Executive Sales Dashboard](images-dashboard.png)
 
 ## 🔎 Key Analysis
 
